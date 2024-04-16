@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="carousel-container">
+    <button class="carousel-btn left" (click)="previousImage()">&#60;</button>
+    <div class="carousel">
+      <img *ngFor="let image of images; let i = index" [src]="image" [class.active]="currentImageIndex === i" [alt]="'Image ' + (i + 1)">
+    </div>
+    <button class="carousel-btn right" (click)="nextImage()">&#62;</button>
+  </div>
+  <div class="locations-container">
+    <div class="locations-header">LOCATIONS</div>
+    <div class="regions-container">
+        <div class="region">
+          <h3>ASIA</h3>
+          <a href="destination/asia"><img src="assets/icons/China.png" alt="China Icon"></a>
+          <p>China</p>
+          <a href="destination/asia"><img src="assets/icons/India.png" alt="India Icon"></a>
+          <p>India</p>
+        </div>
+        <div class="region">
+          <h3>EUROPE</h3>
+          <a href="destination/europe"><img src="assets/icons/France.png" alt="France Icon"></a>
+          <p>France</p>
+          <a href="destination/europe"><img src="assets/icons/Italy.png" alt="Italy Icon"></a>
+          <p>Italy</p>
+        </div>
+        <div class="region">
+          <h3>MIDDLE EAST</h3>
+          <a href="destination/middle-east"><img src="assets/icons/UAE.png" alt="UAE Icon"></a>
+          <p>UAE</p>
+          <a href="destination/middle-east"><img src="assets/icons/Saudi.png" alt="Saudi Icon"></a>
+          <p>Saudi</p>
+        </div>
+        <div class="region">
+          <h3>AMERICAS</h3>
+          <a href="destiantion/americas"><img src="assets/icons/USA.png" alt="US Icon"></a>
+          <p>US</p>
+          <a href="destiantion/americas"><img src="assets/icons/Brazil.png" alt="Brazil Icon"></a>
+          <p>Brazil</p>
+        </div>
+      </div>
+    </div>
+
+ 

@@ -1,0 +1,142 @@
+.about-us-container {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+  }
+  
+  .about-us-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+  
+  .about-us-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .about-us-header p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .about-us-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-text {
+    flex: 0 0 40%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+  
+  .about-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .about-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .about-carousel {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+  }
+  
+  .carousel-image {
+    flex: 0 0 50%;
+  }
+  
+  .carousel-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .carousel-text {
+    flex: 0 0 50%;
+    padding: 40px;
+  }
+  
+  .carousel-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .carousel-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Saturn-inspired design elements */
+  .about-us-container::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .about-us-container::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 80px;
+    height: 80px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    z-index: -1;
+  }

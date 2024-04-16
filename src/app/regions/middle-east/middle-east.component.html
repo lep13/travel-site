@@ -1,0 +1,66 @@
+<app-navbar> </app-navbar>
+
+<div class="header-gradient">
+
+<h1>Middle East</h1>
+
+<div class="filters">
+  <div class="adventure-type-filter">
+    <label for="adventure-type">Filter by Adventure Type:</label>
+    <select id="adventure-type" [(ngModel)]="selectedAdventureType">
+      <option *ngFor="let type of adventureTypes" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+
+  <div class="cost-per-person-filter">
+    <label for="cost-per-person">Filter by Cost per Person:</label>
+    <div class="range-slider">
+      <input
+        type="range"
+        id="cost-per-person-min"
+        min="1000"
+        max="3000"
+        step="100"
+        [(ngModel)]="costPerPersonRange[0]"
+      />
+      <span>{{ costPerPersonRange[0] }}</span>
+      <input
+        type="range"
+        id="cost-per-person-max"
+        min="1000"
+        max="3000"
+        step="100"
+        [(ngModel)]="costPerPersonRange[1]"
+      />
+      <span>{{ costPerPersonRange[1] }}</span>
+    </div>
+  </div>
+
+  <div class="filter-actions">
+    <button class="apply-filters-btn" (click)="applyFilters()">Apply Filters</button>
+    <button class="clear-filters-btn" (click)="clearFilters()">Clear All Filters</button>
+  </div>
+</div>
+
+<div class="tour-packages">
+
+  <div *ngFor="let tour of tourPackages" class="tour-package">
+
+    <a [routerLink]="['/packages', tour.packageId]">
+      <img [src]="tour.imageUrl" alt="{{ tour.packageName }}" />
+      <div class="package-details">
+        <h3>{{ tour.packageName }}</h3>
+        <p>Country: {{ tour.countryName }}</p>
+        <p>Cost per Person: {{ tour.costPerPerson }}</p>
+        <p>Adventure Type: {{ tour.adventureType }}</p>
+        <p>{{ tour.description }}</p>
+      </div>
+    </a>
+  </div>
+ 
+  <div *ngIf="tourPackages.length === 0" class="no-results">
+    <h2>No matching results</h2>
+  </div>
+</div>
+</div>
+<router-outlet></router-outlet>

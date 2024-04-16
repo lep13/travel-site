@@ -1,0 +1,21 @@
+<form [formGroup]="searchForm" (ngSubmit)="search()">
+  <div class="search-container">
+    <div class="search-box">
+      <div class="search-section">
+        <label class="search-label" for="region">Region</label>
+        <select class="input-field" id="region" formControlName="region">
+          <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>
+        </select>
+      </div>
+      <div class="search-section">
+        <label class="search-label" for="check-in">Check-in Date</label>
+        <input type="date" class="input-field long" id="check-in" formControlName="date" [min]="currentDate">
+      </div>
+      <div class="search-section">
+        <label class="search-label" for="travelers">Travelers</label>
+        <input type="number" class="input-field short" id="travelers" formControlName="travelers">
+      </div>
+      <button class="find-tours-btn" type="submit">FIND TOURS</button>
+    </div>
+  </div>
+</form>
