@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #B3C890; 
+  background-color: transparent; 
 }
 
 .search-container {
@@ -17,7 +17,7 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
-  background-color: #B3C890;
+  background-color: transparent;
 }
 
 .search-box {

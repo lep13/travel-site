@@ -1,0 +1,59 @@
+Base styles for all parallax images
+.parallax-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform; /* Optimizes performance */
+  }
+  
+  /* Individual styles for parallax layers */
+  .sky {
+    background-image: url('path-to-your-sky-image.jpg');
+    z-index: 1;
+    transform: translateY(0px);
+  }
+  
+  .mountBg {
+    background-image: url('path-to-your-background-mountains-image.jpg');
+    z-index: 2;
+    transform: translateY(0px);
+  }
+  
+  .mountMg {
+    background-image: url('path-to-your-midground-mountains-image.jpg');
+    z-index: 3;
+    transform: translateY(0px);
+  }
+  
+  .cloud2 {
+    background-image: url('path-to-your-cloud2-image.png');
+    z-index: 4;
+    transform: translateY(0px);
+    opacity: 0.8; /* Adjust opacity as needed */
+  }
+  
+  .mountFg {
+    background-image: url('path-to-your-foreground-mountains-image.jpg');
+    z-index: 5;
+    transform: translateY(0px);
+  }
+  
+  .cloud1 {
+    background-image: url('path-to-your-cloud1-image.png');
+    z-index: 6;
+    transform: translateY(0px);
+    opacity: 0.9; /* Adjust opacity as needed */
+  }
+  
+  .cloud3 {
+    background-image: url('path-to-your-cloud3-image.png');
+    z-index: 7;
+    transform: translateY(0px);
+    opacity: 0.7; /* Adjust opacity as needed */
+  }
+  

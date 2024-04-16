@@ -7,23 +7,26 @@
   margin-bottom: 25px;
 }
 .navbar{
-  
-  background-color:#DBDFAA;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color:#b38d69;
   height: 110px;
 }
 .navbar.active {
-  background: linear-gradient(to bottom, #B3C890 0%, #B3C890 24px,#DBDFAA 15px, #DBDFAA 100%);
+  background: linear-gradient(to bottom, #B3C890 0%, #B3C890 24px,#b38d69 15px, #b38d69 100%);
 }
 
 .navbar:hover{
-  background: linear-gradient(to bottom, #B3C890 0%, #B3C890 22px,#DBDFAA 15px, #DBDFAA 100%);
+  background: linear-gradient(to bottom, #B3C890 0%, #B3C890 22px,#b38d69 15px, #b38d69 100%);
 
 }
 
 .navbar:hover::before{
   content: '';
   position: absolute;
-  background-color: #DBDFAA; 
+  background-color: #b38d69; 
   width: 100%; 
   height: 20px;
   margin-top: -95px;
@@ -88,7 +91,7 @@
  
   padding: 0;
   margin: 0;
-  background-color: #DBDFAA;
+  background-color: #b38d69;
 }
 
 .dropdown-item {
@@ -103,7 +106,7 @@
 .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
-  background-color:#DBDFAA;
+  background-color:#b38d69;
 }
 
 a {
