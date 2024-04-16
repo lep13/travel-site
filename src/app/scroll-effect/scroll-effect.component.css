@@ -15,7 +15,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 87vh;
     min-height: 105px;
     background-image: url('https://images.unsplash.com/photo-1442606383395-175ee96ed967?q=80&fm=jpg&s=5c8c74be9bc91b47c79a1aaf92264be5');
     background-size: cover;

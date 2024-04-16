@@ -6,6 +6,7 @@ import { Component, HostListener, AfterViewInit } from '@angular/core';
   styleUrls: ['./scroll-effect.component.css']
 })
 export class ScrollEffectComponent implements AfterViewInit {
+  // navbarHeight = 110;
   heroHeight: number;
   heroElement: HTMLElement;
   isHeroFixed = false;
@@ -29,5 +30,3 @@ export class ScrollEffectComponent implements AfterViewInit {
     }
   }
 }
-
- 
