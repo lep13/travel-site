@@ -37,6 +37,7 @@ import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
 // import { TestimonialsComponent } from './home/testimonials/testimonials.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import emailjs from '@emailjs/browser';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 
 
@@ -65,6 +66,7 @@ import emailjs from '@emailjs/browser';
     TimelineComponent,
     ConfirmBookingModalComponent,
     ScrollEffectComponent,
+    TestimonialsComponent,
     // ParallaxEffectComponent,
   
     ],
