@@ -1,3 +1,5 @@
+
+
 * {
   box-sizing: border-box; 
   font-family: 'Montserrat', sans-serif; 
@@ -117,7 +119,7 @@ html, body {
 .region {
   margin: 5px;
   padding: 10px;
-  background: #ffffff; /* A subtle contrast to the container */
+  background: #b7a39c; /* A subtle contrast to the container */
   border-radius: 10px;
   text-align: center;
   width: 150px;
