@@ -33,6 +33,7 @@ import { TimelineComponent } from './package-detail/timeline/timeline.component'
 import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-booking-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 // import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
 
 
@@ -62,6 +63,7 @@ import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
     TimelineComponent,
     ConfirmBookingModalComponent,
     ScrollEffectComponent,
+    TestimonialsComponent,
     // ParallaxEffectComponent,
   
     ],
