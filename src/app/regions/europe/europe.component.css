@@ -26,12 +26,13 @@ h1 {
 }
 
 .header-gradient {
-  background: linear-gradient(rgb(204, 166, 154), #fce373);
+  background-color: #eae0d5;
   /*background: linear-gradient(to right, rgb(204, 166, 154), #fce373);*/
   padding: 10px 0 10px 0; 
   text-align: center; 
   border-bottom: 5px solid #fff;
   font-family: 'Montserrat', sans-serif; 
+  border: 0;
 }
 
 
@@ -51,6 +52,14 @@ h1 {
   margin-right: 10px;
 }
 
+.adventure-type-filter select{
+  background-color: #F5F5F5;
+}
+
+.cost-per-person-filter select {
+  background-color: #CCCCCC;
+}
+
 .adventure-type-filter label,
 .cost-per-person-filter label {
   margin-right: 10px;
@@ -61,19 +70,19 @@ h1 {
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ddd;
-  background-color: #ffffff; /* Light background for the select dropdown */
+  /* background-color: #ffffff; Light background for the select dropdown */
   color: #333;
 }
 
 .adventure-type-filter select:hover {
-  background-color: #ffe5cc;
+  background-color: #D3D3D3;
 }
 
 .apply-filters-btn:hover {
-  background-color: #e0a800; 
+  background-color: #cda489; 
 }
 .clear-filters-btn:hover {
-  background-color: #f5c6cb; 
+  background-color: #e09e8a; 
 }
 
 .apply-filters-btn,
@@ -87,12 +96,12 @@ h1 {
 }
 
 .apply-filters-btn {
-  background-color: #ffcb30; /* Bootstrap warning color */
+  background-color: #d9b79c; /* Bootstrap warning color */
   color: #333;
 }
 
 .clear-filters-btn {
-  background-color: #f8d7da; /* Bootstrap danger color light */
+  background-color: #f4b19a; /* Bootstrap danger color light */
   color: #721c24; /* Bootstrap danger color */
 }
 
@@ -164,7 +173,7 @@ h1 {
 }
 
 .tour-package {
-  background-color: #f2f2f2;
+  background-color: #FAF0E6;
   padding: 20px;
   border-radius: 5px;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -186,4 +195,9 @@ h1 {
 .no-results {
   grid-column: 1 / -1;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
