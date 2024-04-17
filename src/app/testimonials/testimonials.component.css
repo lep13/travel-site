@@ -61,7 +61,7 @@ a{
     overflow: hidden;
 }
 .testimonial-box:hover {
-    background-color:#d7ccc8; /* New color on hover */
+    background-color:#b3a5a0; /* New color on hover */
     transform: translateY(-10px);
     transition: all ease 0.3s;
 }
