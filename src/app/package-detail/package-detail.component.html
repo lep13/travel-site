@@ -1,20 +1,26 @@
 <app-navbar></app-navbar>
  
 <div *ngIf="package" class="package-details">
-  <h2>{{ package.packageName }}</h2>
-  <img [src]="package.imageUrl" alt="{{ package.packageName }}">
-  <div class="details-text">
-    <p>{{ package.description }}</p>
-    <p>Country: {{ package.countryName }}</p>
-    <p>Cost per Person: {{ package.costPerPerson }}</p>
+  <div class="details-container">
+    <!-- Image -->
+    <div class="image-container">
+      <img [src]="package.imageUrl2" alt="{{ package.packageName }}">
+    </div>
+ 
+    <!-- Package Information -->
+    <div class="info-container">
+      <h2>{{ package.packageName }}</h2>
+      <p>{{ package.description }}</p>
+      <p>Country: {{ package.countryName }}</p>
+      <p>Cost per Person: {{ package.costPerPerson }}</p>
+      <button class="confirm-button" (click)="openConfirmBookingModal()">Confirm Booking</button>
+      <app-confirm-booking-modal (confirmation)="handleConfirmation($event)"[packageName]="package?.packageName || ''"></app-confirm-booking-modal>
+ 
+    </div>
   </div>
-  <button class="confirm-button" (click)="openConfirmBookingModal()">Confirm Booking</button>
-  <app-confirm-booking-modal (confirmation)="handleConfirmation($event)" [packageName]="package?.packageName || ''"></app-confirm-booking-modal>
 </div>
-<h1
-  style="font-family: 'Enriqueta', Arial, serif; line-height: 1.25; margin: 0 auto 10px; font-size: 50px; font-weight: bold; text-align: center;">
-  Itinerary
-</h1>
+<h1> Itinerary </h1>
+<app-confirm-booking-modal (confirmation)="handleConfirmation($event)"></app-confirm-booking-modal>
  
 <app-timeline></app-timeline>
 <app-footer></app-footer>

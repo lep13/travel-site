@@ -1,10 +1,10 @@
 <div class="container">
   <div class="carousel-container">
-    <button class="carousel-btn left" (click)="previousImage()">&#60;</button>
+    <button class="carousel-btn left" (click)="previousImage()">&#10094;</button>
     <div class="carousel">
       <img *ngFor="let image of images; let i = index" [src]="image" [class.active]="currentImageIndex === i" [alt]="'Image ' + (i + 1)">
     </div>
-    <button class="carousel-btn right" (click)="nextImage()">&#62;</button>
+    <button class="carousel-btn right" (click)="nextImage()">&#10095;</button>
   </div>
   <div class="locations-container">
     <div class="locations-header">LOCATIONS</div>
