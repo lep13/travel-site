@@ -1,29 +1,54 @@
- <app-navbar></app-navbar>
- <div class="seven-rings-container">
-  <div class="package-info">
-    <div class="container">
-      <h1 style="text-align: center; padding-bottom: 20px; font-size: 2.5rem;">The 7 Rings Package</h1>
-    </div>
-    <div class="container">
-      <ul class="package-details">
-      <p style="font-size: 1.3rem;">Experience the prestigious offering from the 7 Rings Travel Company </p>
-      <p style="font-size: 1.3rem;">a journey to all 7 Wonders of the World</p> 
-      <div style="padding-left: 30px;">
-        <li>Flights to all 7 Wonders of the World</li>
-        <li>Luxury accommodations</li>
-        <li>Private guided tours</li>
-        <li>All meals and transportation</li>
-      </div> 
+<app-navbar></app-navbar>
+<div class="exclusive-container">
+  <div class="exclusive-content">
+    <h1 class="exclusive-title">The 7 Rings Package</h1>
+    <p class="exclusive-description">
+      Embark on a journey of a lifetime with The 7 Rings Package, encompassing all the Seven Wonders of the World. Our exclusive itinerary includes destinations across continents, ensuring a seamless luxury experience from the bustling streets of Asia to the historic landmarks of Europe, the architectural marvels of the Middle East, and the natural wonders of the Americas.
+    </p>
+    <ul class="exclusive-highlights">
+      <li>Discover the rich history and beauty of China and India in Asia.</li>
+      <li>Be enchanted by the romantic landscapes of France and Italy in Europe.</li>
+      <li>Experience the modern wonders and culture of the UAE and Saudi Arabia in the Middle East.</li>
+      <li>Embrace the vibrant city life and nature of the USA and Brazil in the Americas.</li>
     </ul>
-    <div  style="padding-left: 20px;">
-      <p class="package-price">$3,000 USD per person</p>
-    <button class="book-now" >Book Now</button>
-    <!-- <app-confirm-booking-modal (confirmation)="handleConfirmation($event)"></app-confirm-booking-modal> -->
+    <div class="exclusive-booking">
+      <span class="exclusive-price">$3,000 USD per person</span>
+      <button class="exclusive-book-now" (click)="openConfirmBookingModal()">Book Now</button>
     </div>
-    
+  </div>
+<div class="book-container"> 
+  <h1 class="title">
+    Explore Now
+   </h1>
+  <div class="book">
+    <div class="gap"></div>
+    <div class="pages">
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+    </div>
+    <div class="flips">
+      <div class="flip flip1">
+        <div class="flip flip2">
+          <div class="flip flip3">
+            <div class="flip flip4">
+              <div class="flip flip5">
+                <div class="flip flip6">
+                  <div class="flip flip7"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
-  <img src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=2011&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="7 Wonders of the World Image" class="wonder-image">
 </div>
+
+<app-confirm-booking-modal (confirmation)="handleConfirmation($event)"></app-confirm-booking-modal>
 
 <app-footer></app-footer>
