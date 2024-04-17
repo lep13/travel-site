@@ -27,19 +27,20 @@
       </div>
   
       <div class="contact-form">
-        <form>
+        <form action="javascript:void(0)" (submit)="send()">
           <div class="form-group">
-            <input type="text" placeholder="Name" required />
+            <input type="text" [(ngModel)]="name" name="name" placeholder="Name" required />
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Email" required />
+            <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
           </div>
           <div class="form-group">
-            <textarea placeholder="Message" required></textarea>
+            <textarea [(ngModel)]="message"  name="message" placeholder="Message"></textarea>
           </div>
           <button type="submit" class="submit-btn">Send Message</button>
         </form>
       </div>
+      
     </div>
   </div>
 
