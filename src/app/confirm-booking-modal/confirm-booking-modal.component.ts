@@ -12,31 +12,32 @@ export class ConfirmBookingModalComponent {
   name: string = '';
   email: string = '';
   phone: string = '';
-
+ 
   showModal: boolean = false;
-
+ 
   openModal() {
     this.showModal = true;
   }
-
+ 
   closeModal() {
     this.showModal = false;
   }
-
+ 
   validateName(name: string): boolean {
     const regex = /^[a-zA-Z ]+$/; // Allows letters and spaces
     return regex.test(name) && name.trim().length > 0;
   }
-
+ 
   validateEmail(email: string): boolean {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
-
+ 
   validatePhoneNumber(phone: string): boolean {
     return /^\d{10}$/.test(phone);
   }
-
+ 
   confirm() {
+
     
   }
 
@@ -45,7 +46,6 @@ export class ConfirmBookingModalComponent {
     to_name : '',
     
     to_email:''
-
   });
   constructor(private fb: FormBuilder){}
   async send()
@@ -58,7 +58,7 @@ export class ConfirmBookingModalComponent {
       alert('Invalid email address.');
       return;
     }
-
+ 
     if (!this.validatePhoneNumber(this.phone)) {
       alert('Phone number must be 10 digits.');
       return;

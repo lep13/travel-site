@@ -35,6 +35,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
 // import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
 import {MatSliderModule} from '@angular/material/slider';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import emailjs from '@emailjs/browser';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+
+
 
 
 @NgModule({
@@ -62,6 +67,7 @@ import {MatSliderModule} from '@angular/material/slider';
     TimelineComponent,
     ConfirmBookingModalComponent,
     ScrollEffectComponent,
+    TestimonialsComponent,
     // ParallaxEffectComponent,
   ],
   imports: [

@@ -1,94 +1,84 @@
 .modal {
   display: none;
-  position: fixed; 
-  z-index: 500; 
+  position: fixed;
+  z-index: 500;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
+  overflow: auto;
+  background-color: rgba(50, 50, 50, 0.8); /* Neutral background color */
+  padding-top: 80px;
 }
 
 
 .modal-content {
-  background-color: #1c1c1c; 
-  margin: 10% auto; 
-  padding: 32px;
-  border: 1px solid #000000;
-  border-radius: 8px; 
-  width: 100%; 
-  color: #B3C890;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
+  background-color: #2c2c2c; /* Dark neutral background */
+  margin: 5% auto; /* Centered with a top margin */
+  padding: 40px; /* Increased padding for better spacing */
+  border: 1px solid #444; /* Subtle border for depth */
+  border-radius: 8px; /* Rounded corners */
+  width: 90%; /* Responsive width */
+  max-width: 700px; /* Increased maximum width */
+  color: #d3d3d3; /* Light text for contrast */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  display: flex; /* Flex layout to center children */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center-align the content horizontally */
 }
 
-.modal-content input[type="text"],
-.modal-content input[type="email"],
-.modal-content input[type="tel"] {
-  width: 90%; 
-  padding: 10px;
-  margin: 10px 0; 
-  display: inline-block;
-  border: 1px solid #B3C890;
-  border-radius: 4px; 
-  box-sizing: border-box; 
-  background-color: #B3C890;
-}
 
-.modal-content .btn-primary {
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 90%;
-  border-radius: 4px; 
-  font-size: 16px;
-}
+/* ... */
 
-.btn-primary{
-  background-color: #73A9AD;
+.btn-primary {
+  background-color: #4a4a4a; /* Dark button background */
   color: white;
-  padding: 10px 20px;
-  margin: 8px 0;
+  padding: 12px 24px;
   border: none;
   cursor: pointer;
-  width: 80%;
-  border-radius: 4px; 
+  width: auto; /* Auto width to fit content */
+  border-radius: 100px; /* Rounded edges */
   font-size: 16px;
   text-align: center;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
-.modal-content .btn-primary:hover {
-  background-color: #B3C890; 
+.btn-primary:hover {
+  background-color: #626262; /* Slightly lighter on hover */
 }
 
 .close {
-  color: #ffffff;
-  float: right;
-  font-size: 29px;
-  font-weight: bold;
+  color: #aaaaaa; /* Lighter close button for better visibility */
+  cursor: pointer;
+  font-size: 24px;
   background: none;
   border: none;
-  margin: 0 2px;
-  position: relative;
-  top: -35px;
-  left: 234px;
-  padding: -56px 0;
-
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-.close:hover,
-.close:focus {
-  color: #ff0000;
-  text-decoration: none;
-  cursor: pointer;
-  
+/* ... */
 
-
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.modal-content form {
+  width: 100%;
+}
 
+.modal-content form .form-group {
+  margin-bottom: 1rem;
+}
+
+/* Adding animation to the modal for a smooth entrance */
 .modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   animation: fadeIn 0.3s;
 }
 
@@ -97,19 +87,9 @@
   to {opacity: 1;}
 }
 
-
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-.modal-content form {
-  width: 100%;
-}
-
-
-.modal-content form .form-group {
-  margin-bottom: 1rem;
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"] {
+  width: 270px; /* Full width to accommodate longer text */
+  /* Rest of the properties remain unchanged */
 }

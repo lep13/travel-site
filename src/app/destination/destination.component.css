@@ -18,8 +18,9 @@ body {
 
   }
   .region-cards{
-    padding-left: 50px;
+    /* padding-left: 50px; */
     padding-top: 120px;
+    margin-bottom: 70px;
     }  
    
   .container {
