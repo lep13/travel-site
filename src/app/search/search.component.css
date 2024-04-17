@@ -1,21 +1,15 @@
 
 .search-container {
-  position: absolute;
+  position: absolute; /* Fixed if you want it to stay in place during scroll */
   left: 50%; /* Center horizontally */
-  bottom: 50%; /* Center vertically */
-  transform: translate(-50%, 50%);
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%);
   display: flex;
-  position: absolute;
-  bottom: 8%;
-  left: 270px;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 650px;
-  height: fit-content;
-  /* padding-top: 300px; */
-  
+  width: 650px; /* Or any width you prefer */
 }
+
 
 .search-box {
   background: rgba(255, 255, 255, 1); 
