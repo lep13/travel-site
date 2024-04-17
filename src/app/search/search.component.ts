@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
   searchForm: FormGroup;
   regions: Region[] = [
     { id: 'asia', name: 'Asia' },
-    { id: 'amer', name: 'Americas' },
+    { id: 'americas', name: 'Americas' },
     { id: 'middle-east', name: 'Middle East' },
     { id: 'europe', name: 'Europe' }
   ];
