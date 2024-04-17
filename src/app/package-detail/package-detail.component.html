@@ -1,28 +1,20 @@
 <app-navbar></app-navbar>
-
+ 
 <div *ngIf="package" class="package-details">
   <h2>{{ package.packageName }}</h2>
-
-  <div class="details-container">
-    <!-- Description, Country Name, and Price -->
-    <div class="details-text">
-      <p>{{ package.description }}</p>
-      <p>Country: {{ package.countryName }}</p>
-      <p>Cost per Person: {{ package.costPerPerson }}</p>
-    </div>
-  
-    <!-- Book Now button -->
-    <div class="button-container">
-      <button class="confirm-button" (click)="openConfirmBookingModal()">Confirm Booking</button>
-    </div>
+  <img [src]="package.imageUrl" alt="{{ package.packageName }}">
+  <div class="details-text">
+    <p>{{ package.description }}</p>
+    <p>Country: {{ package.countryName }}</p>
+    <p>Cost per Person: {{ package.costPerPerson }}</p>
   </div>
-
-  <app-confirm-booking-modal (confirmation)="handleConfirmation($event)"></app-confirm-booking-modal>
+  <button class="confirm-button" (click)="openConfirmBookingModal()">Confirm Booking</button>
+  <app-confirm-booking-modal (confirmation)="handleConfirmation($event)" [packageName]="package?.packageName || ''"></app-confirm-booking-modal>
 </div>
 <h1
   style="font-family: 'Enriqueta', Arial, serif; line-height: 1.25; margin: 0 auto 10px; font-size: 50px; font-weight: bold; text-align: center;">
   Itinerary
 </h1>
-
-<app-timeline></app-timeline> 
+ 
+<app-timeline></app-timeline>
 <app-footer></app-footer>
