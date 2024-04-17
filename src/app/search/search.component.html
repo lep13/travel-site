@@ -1,8 +1,8 @@
-<div class="container-img">
+<div class="search-container"> 
   
   <form [formGroup]="searchForm" (ngSubmit)="search()">
    
-    <div class="search-container">
+    
       <!-- <div class="explore">
         Explore Now
       </div> -->
@@ -12,7 +12,7 @@
          
           <select class="input-field" id="region" formControlName="region">
             <option disabled selected value="">Select Region</option>
-            <option *ngFor="let region of regions"  [value]="region.id">{{ region.name }}</option>
+            <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>
           </select>
           <span class="vertical-line"></span>
           <input type="date" class="input-field" id="check-in" formControlName="date" [min]="currentDate" placeholder="Check-in Date" value="">
@@ -21,7 +21,5 @@
         </div>
         <button class="find-tours-btn" type="submit">FIND&nbsp;TOURS</button>
       </div>
-    </div>
   </form>
 </div>
-

@@ -14,7 +14,7 @@ import { RegionsComponent } from './regions/regions.component';
 import { PackageDetailComponent } from './package-detail/package-detail.component';
 import { AdventuresComponent } from './adventures/adventures.component';
 import { TimelineComponent } from './package-detail/timeline/timeline.component';
-
+import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-booking-modal.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'destinations', component: DestinationComponent},
@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'destination/europe', component: EuropeComponent },
   { path: 'destination/middle-east', component: MiddleEastComponent },
   { path: 'packages/:id', component: PackageDetailComponent },
-  
+   {path: "confirmation", component: ConfirmBookingModalComponent},
   // {path: 'destinations/:regionId/packages', component: PackagesComponent},
   // {
   //   path: 'destination',

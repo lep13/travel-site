@@ -32,9 +32,9 @@ import { AdventuresComponent } from './adventures/adventures.component';
 import { TimelineComponent } from './package-detail/timeline/timeline.component';
 import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-booking-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ParallaxEffextComponent } from './parallax-effext/parallax-effext.component';
-import { TestimonialsComponent } from './home/testimonials/testimonials.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
+// import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
+
 
 
 @NgModule({
@@ -61,9 +61,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     AdventuresComponent,
     TimelineComponent,
     ConfirmBookingModalComponent,
-    ParallaxEffextComponent,
-    TestimonialsComponent,
-  
+    ScrollEffectComponent,
+    // ParallaxEffectComponent,
   
     ],
   imports: [

@@ -32,7 +32,7 @@ export class PackageDetailComponent implements OnInit {
       }
     }
   }
-
+ 
   openConfirmBookingModal() {
     if (this.confirmModal) {
       this.confirmModal.openModal();

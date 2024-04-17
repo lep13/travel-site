@@ -11,7 +11,7 @@ footer {
     align-items: flex-start; 
     justify-content: space-evenly; 
     padding: 2rem 0; 
-    background-color: #F5F0BB;
+    /* background-color: #011e9b; */
   }
   
   .footer-heading {
@@ -21,16 +21,20 @@ footer {
     text-decoration: none;
   }
   
-  .footer-heading:hover::after {
+  .footer-heading::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -5px; 
     height: 2px; 
-    width: 100%; 
+    width: 0%; /* Start with no width */
     background-color: #333; 
-    transition: all 0.3s ease; 
-  }
+    transition: width 0.5s ease; /* Adjust the duration as you like */
+}
+
+.footer-heading:hover::after {
+    width: 100%; /* Full width on hover */
+}
   
   .nav-link {
     color: #333; 

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ParallaxEffextComponent } from './parallax-effext.component';
+import { ScrollEffectComponent } from './scroll-effect.component';
 
-describe('ParallaxEffextComponent', () => {
-  let component: ParallaxEffextComponent;
-  let fixture: ComponentFixture<ParallaxEffextComponent>;
+describe('ScrollEffectComponent', () => {
+  let component: ScrollEffectComponent;
+  let fixture: ComponentFixture<ScrollEffectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ParallaxEffextComponent]
+      declarations: [ScrollEffectComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ParallaxEffextComponent);
+    fixture = TestBed.createComponent(ScrollEffectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
