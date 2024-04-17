@@ -1,11 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
-
 html, body { height: 100%; }
-<<<<<<< HEAD
-body { margin: 0; font-family: 'Lora', serif; }
-=======
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 :root {
@@ -17,4 +10,3 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
->>>>>>> ee6339159c40bfec06139187e091c0a06ec4a0a0
