@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import emailjs from '@emailjs/browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -18,7 +18,7 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { CountryCarouselComponent } from './country-carousel/country-carousel.component';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule } from '@angular/forms';
 import { OfferingsComponent } from './offerings/offerings.component';
 import { CardComponent } from './offerings/card/card.component';
 import { RegionsComponent } from './regions/regions.component';
@@ -34,10 +34,11 @@ import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-bo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
 // import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
-// import { TestimonialsComponent } from './home/testimonials/testimonials.component';
+import {MatSliderModule} from '@angular/material/slider';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import emailjs from '@emailjs/browser';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+
 
 
 
@@ -68,20 +69,26 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
     ScrollEffectComponent,
     TestimonialsComponent,
     // ParallaxEffectComponent,
-  
-    ],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     MatInputModule,
     MatSelectModule,
-    MatDatepickerModule,  
+    MatDatepickerModule,
     FormsModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSliderModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
+
+
+

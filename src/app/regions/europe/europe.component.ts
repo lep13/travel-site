@@ -9,7 +9,7 @@ import { TourPackage } from '../../model/tour-package';
 export class EuropeComponent implements OnInit {
   tourPackages: TourPackage[] = [];
   adventureTypes = ['All','Hill Stations', 'Desert Safari', 'Water Sports', 'Historical', 'Wonders'];
-  selectedAdventureType: string;
+  selectedAdventureType: string = 'All';
   costPerPersonRange: [number, number] = [1000, 3000];
 
   constructor(private tourPackagesService: TourPackagesService) {}
