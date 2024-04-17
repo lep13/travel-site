@@ -34,7 +34,7 @@ import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-bo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
 // import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
-
+import {MatSliderModule} from '@angular/material/slider';
 
 
 @NgModule({
@@ -63,21 +63,20 @@ import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
     ConfirmBookingModalComponent,
     ScrollEffectComponent,
     // ParallaxEffectComponent,
-  
-    ],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     MatInputModule,
     MatSelectModule,
-    MatDatepickerModule,  
+    MatDatepickerModule,
     FormsModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSliderModule
   ],
   providers: [
-    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
