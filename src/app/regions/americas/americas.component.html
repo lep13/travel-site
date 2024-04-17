@@ -16,26 +16,22 @@
     <div class="cost-per-person-filter">
       <label for="cost-per-person">Filter by Cost per Person:</label>
       <div class="range-slider">
-        <input
-          type="range"
-          id="cost-per-person-min"
+        <mat-slider
+          [(ngModel)]="costPerPersonRange"
           min="1000"
           max="3000"
           step="100"
-          [(ngModel)]="costPerPersonRange[0]"
-        />
+          thumbLabel
+          tickInterval="100"
+          #slider
+        ></mat-slider>
         <span>{{ costPerPersonRange[0] }}</span>
-        <input
-          type="range"
-          id="cost-per-person-max"
-          min="1000"
-          max="3000"
-          step="100"
-          [(ngModel)]="costPerPersonRange[1]"
-        />
         <span>{{ costPerPersonRange[1] }}</span>
       </div>
     </div>
+    
+    
+    
   
     <div class="filter-actions">
       <button class="apply-filters-btn" (click)="applyFilters()">Apply Filters</button>

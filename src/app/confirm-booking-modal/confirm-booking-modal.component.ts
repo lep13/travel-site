@@ -1,5 +1,6 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-
+import { Component, Output, EventEmitter,Input } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 @Component({
   selector: 'app-confirm-booking-modal',
   templateUrl: './confirm-booking-modal.component.html',
@@ -7,6 +8,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ConfirmBookingModalComponent {
   @Output() confirmation = new EventEmitter<{ name: string; email: string; phone: string }>();
+  @Input() packageName: string = ''; 
   name: string = '';
   email: string = '';
   phone: string = '';
@@ -35,6 +37,19 @@ export class ConfirmBookingModalComponent {
   }
 
   confirm() {
+    
+  }
+
+  form:FormGroup = this.fb.group({
+    
+    to_name : '',
+    
+    to_email:''
+
+  });
+  constructor(private fb: FormBuilder){}
+  async send()
+  {
     if (!this.validateName(this.name)) {
       alert('Name is required and must not contain special characters.');
       return;
@@ -48,9 +63,23 @@ export class ConfirmBookingModalComponent {
       alert('Phone number must be 10 digits.');
       return;
     }
-
-    alert('Booking confirmed. Our team will get in touch with you.');
+    console.log("hello");
+   
     this.confirmation.emit({ name: this.name, email: this.email, phone: this.phone });
     this.closeModal();
+
+    emailjs.init('MDul_0LJZH5rfOFKk');
+    emailjs.send("service_ff6c129", "template_ghho7zy", {
+      to_name: this.name,
+      message: this.packageName,
+      to_email: this.email,
+    }).then((response) => {
+      console.log('Email sent:', response);
+      alert("Confirmation mail has been sent");
+    }).catch((error) => {
+      console.error('Email sending error:', error);
+      alert("Failed to send confirmation mail. Please check your email address.");
+    });
   }
+ 
 }

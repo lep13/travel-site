@@ -49,8 +49,7 @@ html, body {
   justify-content: center;
   align-items: center;
   padding: 0;
-  border: 10px solid #F5F0BB;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
   margin: 20px;
   border-radius: 20px;
   height: 60vh;
@@ -75,26 +74,23 @@ html, body {
 
 .carousel-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+
+
   z-index: 2; 
 }
 
 .carousel-btn {
   background: transparent;
-  border: 2px solid #F5F0BB; 
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  color: #F5F0BB;
-  font-size: 24px;
+ 
+  color: #ffffff;
+  font-size: 40px;
   line-height: 36px;
   text-align: center;
   position: absolute;
-  top: 50%;
   cursor: pointer;
-  transform: translateY(-50%);
+  font-weight: lighter;
   transition: all 0.3s ease;
+  border: none;
 }
 
 .carousel-btn::before {
@@ -102,18 +98,15 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(255, 206, 71, 0.3);
+
   transform: translate(-50%, -50%);
   z-index: -1;
   transition: all 0.3s ease;
 }
 
 .carousel-btn:hover {
-  transform: scale(1.2); 
-  transition: transform 0.3s ease; 
+  transform: scale(1.0); 
+ 
 }
 
 .carousel-btn.left {
@@ -131,7 +124,6 @@ html, body {
   flex: 0 0 55%;
   align-items: stretch; 
   text-align: center;
-  /*background: linear-gradient(to right, #ff9a52, #ffce47);*/
   padding-right: 20px;
 }
 

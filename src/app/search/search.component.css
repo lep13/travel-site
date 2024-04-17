@@ -1,76 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #B3C890; 
+.container-img{
+  background: url("https://indiacityblog.com/wp-content/uploads/2020/03/185289.jpg");
+  width: 100%;
+  height: 530px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .search-container {
   display: flex;
+  position: absolute;
+  bottom: 8%;
+  left: 270px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px 0;
-  background-color: #B3C890;
+  padding: 20px 0 0;
+  width: 650px;
+  height: fit-content;
+  padding-top: -3px;
+  
 }
 
 .search-box {
-  background-color: #73A9AD;
-  padding: 15px 20px;
+  background: rgba(255, 255, 255, 1); 
+  padding: 6px 20px;
   display: flex;
   align-items: center;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 80%; /* Adjust to your preference */
-  max-width: 960px; /* Adjust to your preference */
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 960px;
+  justify-content: space-evenly;
 }
 
 .search-section {
   display: flex;
-  flex-direction: column;
-  margin-right: 20px; /* Space between sections */
-}
-
-.search-label {
-  color: #F5F0BB;
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: left;
+  flex-direction: row;
+  align-items: center;
 }
 
 .input-field {
-  background: #FFFFFF;
-  border: 2px solid #DBDFAA;
-  border-radius: 3px;
-  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
   color: #333;
   font-size: 16px;
+  margin: 0 5px;
+  width: 150px; 
 }
-
-.input-field.short {
-  width: 60px; /* Width for short input fields like travelers */
-}
-
-.input-field.long {
-  flex-grow: 1; /* Longer input fields like date picker */
+.short{
+  padding: 4px 4px;
+  width: 90px;
 }
 
 .find-tours-btn {
-  padding: 10px 20px;
-  background-color: #DBDFAA; /* Adjusted to your color palette */
-  color: #333;
+
+  background-color: #DBDFAA; 
+  color: #8a1f1f;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  
 }
 
 .find-tours-btn:hover {
@@ -78,14 +73,14 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .search-box {
-    flex-direction: column;
-  }
-  
-  .search-section {
-    margin-right: 0;
-    margin-bottom: 10px; /* Space between stacked sections */
-  }
+.vertical-line {
+  height: 25px;
+  border-left: 2px solid #333; 
+  margin: 0 10px; 
+}
+.explore{
+  background-color: white;
+  padding: 10px 6px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import emailjs from '@emailjs/browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -18,7 +18,7 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { CountryCarouselComponent } from './country-carousel/country-carousel.component';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule } from '@angular/forms';
 import { OfferingsComponent } from './offerings/offerings.component';
 import { CardComponent } from './offerings/card/card.component';
 import { RegionsComponent } from './regions/regions.component';
@@ -33,6 +33,8 @@ import { TimelineComponent } from './package-detail/timeline/timeline.component'
 import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-booking-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ParallaxEffextComponent } from './parallax-effext/parallax-effext.component';
+import { TestimonialsComponent } from './home/testimonials/testimonials.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 @NgModule({
@@ -60,6 +62,8 @@ import { ParallaxEffextComponent } from './parallax-effext/parallax-effext.compo
     TimelineComponent,
     ConfirmBookingModalComponent,
     ParallaxEffextComponent,
+    TestimonialsComponent,
+  
   
     ],
   imports: [
@@ -73,7 +77,14 @@ import { ParallaxEffextComponent } from './parallax-effext/parallax-effext.compo
     NgbModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
+
+
+

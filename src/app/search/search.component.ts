@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
   searchForm: FormGroup;
   regions: Region[] = [
     { id: 'asia', name: 'Asia' },
-    { id: 'amer', name: 'Americas' },
+    { id: 'americas', name: 'Americas' },
     { id: 'middle-east', name: 'Middle East' },
     { id: 'europe', name: 'Europe' }
   ];
@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
     this.searchForm = this.fb.group({
       region: ['', Validators.required],
       date: ['', Validators.required],
-      travelers: [1, [Validators.required, Validators.min(1)]]
+      travelers: ['', [Validators.required, Validators.min(1)]]
     });
   }
 

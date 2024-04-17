@@ -21,7 +21,15 @@ export class PackageDetailComponent implements OnInit {
   ngOnInit() {
     const packageId = this.route.snapshot.paramMap.get('id');
     if (packageId) {
-      this.package = this.tourPackagesService.getTourPackages('1').find(p => p.packageId === packageId);
+ 
+      const regions = ['1', '2', '3', '4'];
+      for (const region of regions) {
+        const tourPackage = this.tourPackagesService.getTourPackages(region).find(p => p.packageId === packageId);
+        if (tourPackage) {
+          this.package = tourPackage;
+          break;
+        }
+      }
     }
   }
 
