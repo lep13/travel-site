@@ -14,54 +14,41 @@ html, body {
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensures even spacing between elements */
-  padding-top: 35px;
+  justify-content: space-between; 
+  padding-top: 75px;
+  padding-bottom: 20px;
   height: 70vh;
-  background-color: #e8e6e3; /* Your chosen color */
+  background-color: #e8e6e3; 
 }
 
-/* .locations-header {
-  font-weight: bolder; 
-  text-align: center; 
-  font-size: xx-large; 
-  padding: 20px 0; 
-  font-family: 'Montserrat', sans-serif; 
-  color: #333;
-} */
-
-/* .carousel-container, .locations-container {
-  flex: none;
-  height: 100%;
-  margin: 0;
-  padding: 0; 
-} */
+.locations-header {
+  font-size: 2em;
+  font-weight: semi;
+  padding-bottom: 40px;
+} 
 
 .carousel-container {
-  flex: 1; /* Allows the carousel to grow as needed */
-  padding: 10px;
+  /* flex: 1;  */
+  /* padding: 10px; */
   margin: 20px;
-  width: 60vh;
-  height: 60vh;
+  width: 75vh;
+  height: 55vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   overflow: hidden;
+  border: solid 10px #ffffff; 
+  justify-content: center; 
+  align-items: center; 
+  box-sizing: border-box;
 }
 
 
 .carousel img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.carousel img {
-  max-width: 100%; 
-  max-height: 100%;
+  width: calc(100% + 20px);
+  height: 100%;
+  max-width: none;
   display: none;
   object-fit: cover; 
 }
@@ -72,15 +59,15 @@ html, body {
 }
 
 .carousel-btn {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2; 
+  position: absolute;
+  z-index: 2;
 }
 
 .carousel-btn {
-  background: transparent;
-  border: 2px solid #F5F0BB; 
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none; 
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -103,7 +90,7 @@ html, body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(255, 206, 71, 0.3);
+  /* background-color: rgba(255, 206, 71, 0.3); */
   transform: translate(-50%, -50%);
   z-index: -1;
   transition: all 0.3s ease;
@@ -112,6 +99,7 @@ html, body {
 .carousel-btn:hover {
   transform: scale(1.2); 
   transition: transform 0.3s ease; 
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .carousel-btn.left {

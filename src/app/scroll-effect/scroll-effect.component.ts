@@ -19,6 +19,10 @@ export class ScrollEffectComponent implements AfterViewInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(): void {
+    requestAnimationFrame(this.adjustHeroHeight.bind(this));
+  }
+  
+  adjustHeroHeight(): void {
     const scrollOffset = window.scrollY;
     if (scrollOffset < this.heroHeight) {
       this.heroElement.style.height = `${this.heroHeight - scrollOffset}px`;
@@ -29,4 +33,4 @@ export class ScrollEffectComponent implements AfterViewInit {
       this.heroElement.classList.remove('fixme');
     }
   }
-}
+}  

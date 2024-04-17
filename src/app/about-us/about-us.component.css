@@ -1,6 +1,6 @@
 .about-us-container {
     background-color: #f8f8f8;
-    padding: 80px 0;
+    padding: 80px 40px;
   }
   
   .about-us-header {
@@ -91,52 +91,3 @@
     line-height: 1.6;
   }
   
-  /* Saturn-inspired design elements */
-  .about-us-container::before {
-    content: "";
-    position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 300px;
-    height: 300px;
-    background-color: #e6e6e6;
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  .about-us-container::after {
-    content: "";
-    position: absolute;
-    bottom: -100px;
-    right: -100px;
-    width: 200px;
-    height: 200px;
-    background-color: #d9d9d9;
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  .carousel-item::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
-    background-color: #f2f2f2;
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  .carousel-item::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    width: 80px;
-    height: 80px;
-    background-color: #e6e6e6;
-    border-radius: 50%;
-    z-index: -1;
-  }
