@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TourPackage } from '../model/tour-package';
+import { SafeUrl } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -159,20 +160,28 @@ export class TourPackagesService {
     }
   ];
 
-  getTourPackages(regionId: string, adventureType?: string, costRange?: [number, number]): TourPackage[] {
+    getTourPackages(regionId: string, adventureType?: string, costRange?: [number, number]): TourPackage[] {
     let filteredTours = this.tours.filter(tour => tour.regionId === regionId);
-
+ 
     if (adventureType && adventureType !== 'All') {
       filteredTours = filteredTours.filter(tour => tour.adventureType === adventureType);
     }
-
+ 
     if (costRange) {
       filteredTours = filteredTours.filter(tour => tour.costPerPerson >= costRange[0] && tour.costPerPerson <= costRange[1]);
     }
-
+ 
     return filteredTours;
   }
   
+   getItinerary(packageId : string )  { 
+    let imageUrl : SafeUrl = "https://excursionmania.com/wp-content/uploads/2021/02/ist-1.jpeg";
+    if (packageId) {
+      let filteredTours = this.tours.filter(p => p.packageId === packageId);
+      imageUrl = filteredTours[0].imageUrl;
+    }
+  return imageUrl;
+  }
 
   // constructor() { }
 }
