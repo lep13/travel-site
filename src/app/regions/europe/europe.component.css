@@ -25,6 +25,7 @@ h1 {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+
 .header-gradient {
   background-color: #eae0d5;
   /*background: linear-gradient(to right, rgb(204, 166, 154), #fce373);*/
@@ -35,23 +36,65 @@ h1 {
   border: 0;
 }
 
+.custom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* gap: 32px; */
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
 
 .filters {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  gap: 8px;
   margin-bottom: 20px;
-  padding: 20px;
+  width: 100%;
+  padding: 0px 32px 0px 64px;
   border-radius: 8px;
 }
 
 .adventure-type-filter,
 .cost-per-person-filter {
   display: flex;
+  text-wrap: nowrap;
   align-items: center;
-  margin-right: 10px;
+  gap: 4px;
 }
 
+.adventure-type-filter {
+  width: 28%;
+}
+
+.cost-per-person-filter {
+  width: 46%;
+  padding-right: 24px;
+}
+
+.filter-actions {
+  width: 26%;
+}
+
+.slider {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 0px 8px;
+}
+
+.slider span {
+  font-size: 0.8rem;
+  width: 8%;
+}
+ mat-slider {
+  width: 70% !important;
+ }
 .adventure-type-filter select{
   background-color: #F5F5F5;
 }
@@ -60,8 +103,7 @@ h1 {
   background-color: #CCCCCC;
 }
 
-.adventure-type-filter label,
-.cost-per-person-filter label {
+.adventure-type-filter label {
   margin-right: 10px;
 }
 
@@ -89,6 +131,7 @@ h1 {
 .clear-filters-btn {
   padding: 10px 20px;
   border-radius: 20px; 
+  font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease; 
@@ -160,6 +203,7 @@ h1 {
 
 .filter-actions {
   display: flex;
+  justify-content: space-between;
   gap: 10px;
 }
 

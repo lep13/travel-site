@@ -6,39 +6,26 @@
 
 <div class="filters">
   <div class="adventure-type-filter">
-    <label for="adventure-type">Filter by Adventure Type:</label>
+    <label for="adventure-type">Adventure Type:</label>
     <select id="adventure-type" [(ngModel)]="selectedAdventureType">
       <option *ngFor="let type of adventureTypes" [value]="type">{{ type }}</option>
     </select>
   </div>
-
   <div class="cost-per-person-filter">
-    <label for="cost-per-person">Filter by Cost per Person:</label>
-    <div class="range-slider">
-      <input
-        type="range"
-        id="cost-per-person-min"
-        min="1000"
-        max="3000"
-        step="100"
-        [(ngModel)]="costPerPersonRange[0]"
-      />
+    <label for="cost-per-person" class="">Cost per Person:</label>
+    <div class="slider">
       <span>{{ costPerPersonRange[0] }}</span>
-      <input
-        type="range"
-        id="cost-per-person-max"
-        min="1000"
-        max="3000"
-        step="100"
-        [(ngModel)]="costPerPersonRange[1]"
-      />
+      <mat-slider min="1000" max="3000" step="100" discrete>
+        <input matSliderStartThumb [(ngModel)]="costPerPersonRange[0]" />
+        <input matSliderEndThumb [(ngModel)]="costPerPersonRange[1]" />
+      </mat-slider>
       <span>{{ costPerPersonRange[1] }}</span>
     </div>
   </div>
 
   <div class="filter-actions">
     <button class="apply-filters-btn" (click)="applyFilters()">Apply Filters</button>
-    <button class="clear-filters-btn" (click)="clearFilters()">Clear All Filters</button>
+    <button class="clear-filters-btn" (click)="clearFilters()">Clear Filters</button>
   </div>
 </div>
 

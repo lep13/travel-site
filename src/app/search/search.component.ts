@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
     this.searchForm = this.fb.group({
       region: ['', Validators.required],
       date: ['', Validators.required],
-      travelers: [1, [Validators.required, Validators.min(1)]]
+      travelers: ['', [Validators.required, Validators.min(1)]]
     });
   }
 
