@@ -10,11 +10,12 @@
   background-color: rgba(0,0,0,0.4); 
 }
 
+
 .modal-content {
   background-color: #1c1c1c; 
   margin: 10% auto; 
-  padding: 40px;
-  border: 1px solid #888;
+  padding: 32px;
+  border: 1px solid #000000;
   border-radius: 8px; 
   width: 100%; 
   color: #B3C890;
@@ -62,17 +63,28 @@
 }
 
 .close {
-  color: #aaaaaa;
+  color: #ffffff;
   float: right;
-  font-size: 10px;
+  font-size: 29px;
   font-weight: bold;
+  background: none;
+  border: none;
+  margin: 0 2px;
+  position: relative;
+  top: -35px;
+  left: 234px;
+  padding: -56px 0;
+
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #ff0000;
   text-decoration: none;
   cursor: pointer;
+  
+
+
 }
 
 

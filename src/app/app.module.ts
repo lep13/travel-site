@@ -34,6 +34,9 @@ import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-bo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
 // import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
+// import { TestimonialsComponent } from './home/testimonials/testimonials.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import emailjs from '@emailjs/browser';
 
 
 
