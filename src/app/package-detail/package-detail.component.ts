@@ -32,7 +32,7 @@ export class PackageDetailComponent implements OnInit {
       }
     }
   }
-
+ 
   openConfirmBookingModal() {
     if (this.confirmModal) {
       this.confirmModal.openModal();
@@ -40,6 +40,7 @@ export class PackageDetailComponent implements OnInit {
   }
 
   handleConfirmation({ email, phone }: { email: string; phone: string }) {
+    // Handle the confirmation logic here, such as making an API call to finalize the booking
     console.log('Booking confirmed for:', email, phone);
   }
 }

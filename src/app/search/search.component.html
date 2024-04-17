@@ -1,21 +1,25 @@
-<form [formGroup]="searchForm" (ngSubmit)="search()">
-  <div class="search-container">
-    <div class="search-box">
-      <div class="search-section">
-        <label class="search-label" for="region">Region</label>
-        <select class="input-field" id="region" formControlName="region">
-          <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>
-        </select>
+<div class="search-container"> 
+  
+  <form [formGroup]="searchForm" (ngSubmit)="search()">
+   
+    
+      <!-- <div class="explore">
+        Explore Now
+      </div> -->
+      <div class="search-box">
+        
+        <div class="search-section">
+         
+          <select class="input-field" id="region" formControlName="region">
+            <option disabled selected value="">Select Region</option>
+            <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>
+          </select>
+          <span class="vertical-line"></span>
+          <input type="date" class="input-field" id="check-in" formControlName="date" [min]="currentDate" placeholder="Check-in Date" value="">
+          <span class="vertical-line"></span>
+          <input type="number" class="input-field short" id="travelers" formControlName="travelers" placeholder="Travelers" value="">
+        </div>
+        <button class="find-tours-btn" type="submit">FIND&nbsp;TOURS</button>
       </div>
-      <div class="search-section">
-        <label class="search-label" for="check-in">Check-in Date</label>
-        <input type="date" class="input-field long" id="check-in" formControlName="date" [min]="currentDate">
-      </div>
-      <div class="search-section">
-        <label class="search-label" for="travelers">Travelers</label>
-        <input type="number" class="input-field short" id="travelers" formControlName="travelers">
-      </div>
-      <button class="find-tours-btn" type="submit">FIND TOURS</button>
-    </div>
-  </div>
-</form>
+  </form>
+</div>
