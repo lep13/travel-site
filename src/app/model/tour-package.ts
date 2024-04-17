@@ -10,5 +10,6 @@ export interface TourPackage {
         adventureType: string;
         description: string;
         imageUrl: SafeUrl;
+        imageUrl2: SafeUrl;
         // rating: string;
 }
