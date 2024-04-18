@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
-
 
 * {
     padding: 0;
@@ -9,7 +6,6 @@
 }
 
 body {
-    font-family: 'Indie Flower', cursive;
     background-color: #eee;
     color: #555;
     text-align: center;
@@ -67,7 +63,6 @@ $images:
     margin-top: 90px;
     margin-bottom: -90px; // Reduce space above the title
     width: 100%; // Ensure the title takes up full width for centering
-    font-family: 'Lora', serif;
 
   }
   
@@ -281,7 +276,6 @@ $images:
 }
 
 body {
-  font-family: 'Lora', serif;
   background-color: #eee;
   color: #555;
   text-align: center;
@@ -307,7 +301,6 @@ body {
   .exclusive-title {
     font-size: 2.5em;
     margin-bottom: 0.5em;
-    font-family: 'Lora', serif;
   }
 
   .exclusive-description {
@@ -331,7 +324,6 @@ body {
       font-weight: semi-bold;
       display: block;
       margin-bottom: 1em;
-      font-family: 'Lora', serif;
     }
 
     .exclusive-book-now {

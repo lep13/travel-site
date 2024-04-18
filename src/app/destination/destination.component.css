@@ -1,9 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.container{
-    font-family: 'Montserrat', sans-serif; 
+.title-main{
+  padding-top: 80px; 
+  padding-bottom: 10px; 
+  padding-left: 390px; 
+  font-size: 9em;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
 }
 
+.container{
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+  padding-top: 100px;
+}
 
 body {
     margin: 0;
@@ -13,7 +26,6 @@ body {
     height: 100vh;
     width: 100vw;
     flex: content;
-    font-family: 'Montserrat', sans-serif; 
 
 
   }
@@ -154,7 +166,6 @@ body {
   p {
     text-align: center;
     position: absolute;
-    font-family: "Playfair Display";
   }
   
   .title {
@@ -162,13 +173,13 @@ body {
     font-weight: 700;
     transition: all 1s;
     top: 0;
+    
   }
   
   .para {
     
     font-size: 16px;
-    font-family: "Raleway";
-    padding: 20px;
+    padding: 20px 40px;
     margin: 0;
     text-align: center;
   }

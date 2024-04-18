@@ -28,20 +28,18 @@ html, body {
 } 
 
 .carousel-container {
-  /* flex: 1;  */
-  /* padding: 10px; */
   margin: 20px;
   width: 75vh;
-  height: 55vh;
+  height: 34vh;
   display: flex;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   overflow: hidden;
-  /* border: solid 1px #ffffff;  */
   justify-content: center; 
   align-items: center; 
   box-sizing: border-box;
+  transition: transform 0.5s ease-in-out;
 }
 
 
@@ -115,7 +113,7 @@ html, body {
 .region {
   margin: 5px;
   padding: 10px;
-  background: #ffffff; /* A subtle contrast to the container */
+  background:linear-gradient(rgba(145, 185, 218, 0.509), rgba(209, 177, 164, 0.505)); /* A subtle contrast to the container */
   border-radius: 10px;
   text-align: center;
   width: 150px;

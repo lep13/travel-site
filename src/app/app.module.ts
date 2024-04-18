@@ -9,7 +9,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { PackagesComponent } from './destination/packages/packages.component';
+import { PackagesComponent } from '../packages/packages.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
@@ -36,8 +36,9 @@ import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
 // import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
 import {MatSliderModule} from '@angular/material/slider';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import emailjs from '@emailjs/browser';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { TypeWriterComponent } from './type-writer/type-writer.component';
+import { LocationsTextComponent } from './locations-text/locations-text.component';
 
 
 
@@ -68,6 +69,8 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
     ConfirmBookingModalComponent,
     ScrollEffectComponent,
     TestimonialsComponent,
+    TypeWriterComponent,
+    LocationsTextComponent,
     // ParallaxEffectComponent,
   ],
   imports: [
