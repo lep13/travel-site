@@ -19,11 +19,18 @@ a{
     padding-left: 1px;
     padding-right:1px;
 }
+
+.rating-color{
+    color: #fbc634
+}
+
 .testimonial-heading{
     letter-spacing: 1px;
     /* margin: 30px 0px; */
     padding: 10px 20px;
     display: flex;
+    font-size: xx-large;
+    font-weight: 500;
     flex-direction: column;
     justify-content: center;
     align-items: center;

@@ -1,50 +1,94 @@
-.container{
-    color: #333;
-    padding: 0;
+/* Add Font Awesome link to your CSS file or HTML head */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+ 
+.container {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  padding: 0;
 }
-
+ 
 footer {
-    display: flex;
-    align-items: flex-start; 
-    justify-content: space-evenly; 
-    padding: 2rem 0; 
-    /* background-color: #011e9b; */
-  }
-  
-  .footer-heading {
-    margin-bottom: 1rem; 
-    position: relative; 
-    cursor: pointer; 
-    text-decoration: none;
-  }
-  
-  .footer-heading::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px; 
-    height: 2px; 
-    width: 0%; /* Start with no width */
-    background-color: #333; 
-    transition: width 0.5s ease; /* Adjust the duration as you like */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 2rem 0;
 }
-
+ 
+.footer-heading {
+  margin-bottom: 1rem;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+ 
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  background-color: #333;
+  transition: width 0.5s ease;
+}
+ 
 .footer-heading:hover::after {
-    width: 100%; /* Full width on hover */
+  width: 100%;
 }
-  
-  .nav-link {
-    color: #333; 
-    transition: color 0.3s ease; 
-  }
-  
-  .nav-link:hover {
-    text-decoration: none; 
-    color: #117a8b; 
-  }
-  
-  .footer-heading {
-    margin-top: 1rem; 
-  }
-
-  
+ 
+.nav-link {
+  color: #333;
+  transition: color 0.3s ease;
+}
+ 
+.nav-link:hover {
+  text-decoration: none;
+  color: #117a8b;
+}
+ 
+.footer-heading {
+  margin-top: 1rem;
+}
+ 
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+ 
+.social-icons li:last-child {
+  margin-right: 0;
+}
+ 
+.social-icons a {
+  display: inline-block;
+  color: #333;
+  font-size: 24px;
+}
+ 
+/* Add round box shadow on hover */
+.social-icons a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Increased opacity */
+  border-radius: 50%; /* Make it round */
+}
+.social-icons li a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #333;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+ 
+.social-icons li a:hover {
+  background-color: black;
+  color: #fff;
+  border-radius: 50%;
+}

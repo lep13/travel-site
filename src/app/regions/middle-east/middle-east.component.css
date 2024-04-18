@@ -1,5 +1,4 @@
 
-
 *,
 *::before,
 *::after {
@@ -8,29 +7,25 @@
   padding: 0;
 }
 
-body {
-  background-color: #e8e6e3; /* General background color */
-}
-
 h1 {
-  font-size: 4rem; /* Larger size */
-  font-weight: 700; /* Bolder weight */
-  color: #333; /* White color for contrast */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Stronger text shadow for legibility */
-  padding-left: 50px;
-  padding-top: 40px;
-  padding-bottom: 80px;
-  background: linear-gradient(rgb(255, 255, 255), #ecd7d7);
+  text-align: center;
+  font-weight: 700;
+  color: #333; 
+  padding: 30px 0 10px 0; 
+  margin-bottom: 30px; 
+  text-transform: uppercase; 
+  letter-spacing: 2px;  
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-/* Add a faded backdrop image for the header */
+
 .header-gradient {
-  /* background: url('https://i.pinimg.com/564x/4c/2d/f8/4c2df8eed3f1aaeda78cf83c2828df20.jpg') no-repeat center center;  */
-  background-size: cover; Ensure it covers the full "Asia" div
-  color: #fff;
-  width: 100%; /* Full width */
-  padding: 20px 0; /* Adjust padding to control the height of the div */
-  padding-bottom: 0;
+  background-color: #eae0d5;
+  /*background: linear-gradient(to right, rgb(204, 166, 154), #fce373);*/
+  padding: 10px 10px 50px 10px; 
+  text-align: center; 
+  border-bottom: 5px solid #fff; 
+  border: 0;
 }
 
 .custom-container {
@@ -43,46 +38,16 @@ h1 {
   margin: 0px;
 }
 
-.filters{
-  background: rgba(255, 255, 255, 0.9); 
-  padding: 10px 16px; 
-  /* border-radius: 10px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
-  margin-bottom: 0px; 
-  margin-top: 0px;
-  align-items: center; 
-  max-width: 100%; 
-  padding-left: 48px;
-  padding-bottom: 80px;
-  margin-right: 0;
-  width:100%;
-  color:#333;
-  background-color: #ecd7d7;
+.filters {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 0px 32px 0px 64px;
+  border-radius: 8px;
 }
-
-.filters label,
-.filters select,
-.filters .slider {
-  margin-bottom: 0.7em; /* Adjust this value as needed */
-}
-
-/* Remove margin from the last element */
-.filters .filter-actions {
-  margin-bottom: 0; /* Ensures no margin at the bottom of the last element */
-}
-
-.filters label {
-  font-size: 1rem; /* Adjust the font size as needed */
-  margin-right: 0.5rem; /* Space after label for clarity */
-}
-
-.filters select {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  color: #333;
-}
-
 
 .adventure-type-filter,
 .cost-per-person-filter {
@@ -163,7 +128,6 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-  margin-right: 0.5em;
 }
 
 .apply-filters-btn {
@@ -190,8 +154,9 @@ h1 {
 }
 
 .range-slider input[type="range"] {
-  width: 100%; /* Full width of its container */
-  margin: 0; /* Remove any margin for alignment */
+  width: 200px;
+  margin: 0 10px;
+  background: transparent;
 }
 
 .range-slider span {
@@ -211,13 +176,13 @@ h1 {
 }
 
 .range-slider input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default appearance */
+  -webkit-appearance: none;
   appearance: none;
-  width: 25px; /* Width of the thumb */
-  height: 25px; /* Height of the thumb */
-  border-radius: 50%; /* Make it circular */
-  background: #fe7606; /* Background color of the thumb */
-  cursor: pointer; /* Cursor to indicate it's draggable */
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fe7606;
+  cursor: pointer;
 }
 
 .range-slider input[type="range"]::-moz-range-thumb {
@@ -228,13 +193,10 @@ h1 {
   cursor: pointer;
 }
 
-.filter-actions button {
-  padding: 8px 16px; /* Adjust padding for better ergonomics */
-  font-size: 0.9rem; /* Smaller font size for subtlety */
-  border-radius: 100px; /* Rounded corners for the buttons */
-  border: none; /* Remove border for a cleaner look */
-  cursor: pointer;
-  transition: all 0.2s; /* Smooth transition for hover effects */
+.filter-actions {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2px;
 }
 
 
@@ -242,26 +204,17 @@ h1 {
   padding: 20px 0 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 40px;
+  grid-gap: 20px;
   justify-items: center;
-  background-color: #fce9e9;
-  padding-bottom: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 40px;
-
-  
 }
 
 .tour-package {
-  background-color: #e0c4bb;
-  padding: 20px;
+  background-color: #FAF0E6;
+  padding: 20px 15px;
   border-radius: 5px;
   transition: transform 0.2s, box-shadow 0.2s;
-  color:#333;
-  margin: 0 10px;
-  justify-content: space-between; /* Aligns content space between */
-  height: 100%;
+  height: 485px;
+  width: 390px;
 }
 
 .tour-package:hover {
