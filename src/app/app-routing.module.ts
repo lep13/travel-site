@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { PackagesComponent } from './destination/packages/packages.component';
+import { PackagesComponent } from '../packages/packages.component';
 import { AsiaComponent } from './regions/asia/asia.component';
 import { AmericasComponent } from './regions/americas/americas.component';
 import { EuropeComponent } from './regions/europe/europe.component';

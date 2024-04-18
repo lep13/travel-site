@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
 }
 .hero-nav {
     z-index: 50;
@@ -15,7 +13,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 87vh;
+    height: 100vh;
     min-height: 105px;
     background-image: url('/assets/icons/hero-img.jfif');
     background-size: cover;
@@ -38,6 +36,7 @@ body, html {
 }
 .hero-nav__inner {
     z-index: 1;
+    margin-bottom: 160px;
 }
 /* .hero-nav h1 {
     color: #efefef;
