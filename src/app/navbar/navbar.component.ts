@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,8 +13,12 @@ export class NavbarComponent {
   isAdventuresPage: boolean = false;
   isContactPage: boolean = false;
   isAboutPage: boolean = false;
+  isMyBookingsPage : boolean = false;
+  
 
-  constructor(private router: Router) {
+  constructor(private router: Router,private authService : AuthService) {
+    this.authService = authService;
+    
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.isNavLinkActive = event.url.includes('/destinations') || event.url.includes('/adventures');
@@ -21,7 +26,18 @@ export class NavbarComponent {
         this.isAdventuresPage = event.url === '/adventures';
         this.isContactPage = event.url === '/contact';
         this.isAboutPage = event.url === '/about-us';
+        this.isMyBookingsPage = event.url === '/mybookings';
       }
-    });
+
+     
+    
+    }); 
+  }
+  get isLoggedIn() {
+    return this.authService.isLoggedIn();
+  }
+  
+  logout(){
+    this.authService.logout();
   }
 }

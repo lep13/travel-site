@@ -28,6 +28,9 @@
     <button class="clear-filters-btn" (click)="clearFilters()">Clear Filters</button>
   </div>
 </div>
+<div *ngIf="selectedRegion !== '' && selectedDate !== ''">
+  <p>Search Results from your trip to {{selectedRegion}}, on {{selectedDate}} for {{selectedTravelers}} traveller(s)</p>
+</div>
 
 <div class="tour-packages">
 

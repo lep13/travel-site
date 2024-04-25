@@ -1,0 +1,61 @@
+<div class="wrapper-back">
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login" [class.active]="loginActive" (click)="toggleForm('login')">Login</div>
+      <div class="title signup" [class.active]="!loginActive" (click)="toggleForm('signup')">Signup</div>
+    </div>
+    <div class="form-container">
+      <div class="form-inner">
+        <form *ngIf="loginActive" (ngSubmit)="login()" #loginForm="ngForm">
+          <!-- Login form fields -->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" [(ngModel)]="email" placeholder="Enter email" required>
+            <small class="text-danger">{{ emailErrorMessage }}</small> <!-- Display email error message -->
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Password" required>
+            <small class="text-danger">{{ passwordErrorMessage }}</small> <!-- Display password error message -->
+          </div>
+          <div class="kia">
+            <p>New User to 7Rings?&nbsp;</p><p id="login" (click)="toggleForm('signup')">Register</p>
+          </div>
+          
+          <button type="button" class="btn btn-info" (click)="login()">Login</button>
+          <!-- Additional error message placeholders can be added here if needed -->
+        </form>
+        <form *ngIf="!loginActive" (ngSubmit)="register()" #signupForm="ngForm">
+          <!-- Signup form fields -->
+          <div class="form-group">
+            <label for="exampleInputUsername">Username</label>
+            <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Enter username" required>
+            <small class="text-danger">{{ usernameErrorMessage }}</small> <!-- Display username error message -->
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="Enter email" required>
+            <small class="text-danger">{{ emailErrorMessage }}</small> <!-- Display email error message -->
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Password" required>
+            <small class="text-danger">{{ passwordErrorMessage }}</small> <!-- Display password error message -->
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password</label>
+            <input type="password" class="form-control" name="confirmPassword" [(ngModel)]="confirmPassword" placeholder="Confirm Password" required>
+            <small class="text-danger">{{ confirmPasswordErrorMessage }}</small> <!-- Display confirm password error message -->
+          </div>
+          <div class="kia">
+            <p>Aldready an user?&nbsp;</p><p id="login" (click)="toggleForm('login')">Log In</p>
+          </div>
+          <button type="button" class="btn btn-info" (click)="register()">Register</button>
+          <!-- Additional error message placeholders can be added here if needed -->
+       
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

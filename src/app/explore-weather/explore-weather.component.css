@@ -1,0 +1,30 @@
+.weather-invite {
+    background-color: #e8e6e3;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Cabin', sans-serif;
+  }
+  
+  .weather-invite h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: 'Cabin', sans-serif;
+    font-size: x-large;
+  }
+  
+  .weather-button {
+    background-color: lightgrey;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .weather-button:hover {
+    background-color: darkgrey;
+    color: white;
+  }
+  

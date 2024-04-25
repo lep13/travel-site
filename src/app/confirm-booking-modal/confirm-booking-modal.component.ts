@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 })
 export class ConfirmBookingModalComponent {
   @Output() confirmation = new EventEmitter<{ name: string; email: string; phone: string }>();
-  @Input() packageName: string = ''; 
+  @Input() packageName: string = '';
   name: string = '';
   email: string = '';
   phone: string = '';
@@ -29,7 +29,7 @@ export class ConfirmBookingModalComponent {
   }
  
   validateEmail(email: string): boolean {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return /^[a-zA-Z0-9][^\s@]*@gmail\.com$/.test(email);
   }
  
   validatePhoneNumber(phone: string): boolean {
@@ -37,14 +37,14 @@ export class ConfirmBookingModalComponent {
   }
  
   confirm() {
-
-    
+ 
+   
   }
-
+ 
   form:FormGroup = this.fb.group({
-    
+   
     to_name : '',
-    
+   
     to_email:''
   });
   constructor(private fb: FormBuilder){}
@@ -67,7 +67,7 @@ export class ConfirmBookingModalComponent {
    
     this.confirmation.emit({ name: this.name, email: this.email, phone: this.phone });
     this.closeModal();
-
+ 
     emailjs.init('MDul_0LJZH5rfOFKk');
     emailjs.send("service_ff6c129", "template_ghho7zy", {
       to_name: this.name,

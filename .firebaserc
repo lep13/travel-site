@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tourism-c66ca": {
+      "hosting": {
+        "trip-project": [
+          "tourism-c66ca"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tourism-c66ca"
+  }
+}

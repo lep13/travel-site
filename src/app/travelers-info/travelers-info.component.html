@@ -1,0 +1,85 @@
+<div style="padding-top: 20px;"></div>
+<div class="big">
+  <div class="travelers-form">
+    <h2>Add Travelers Information</h2>
+    <form [formGroup]="travelerForm" (ngSubmit)="saveTraveler()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name" required>
+        <div *ngIf="travelerForm?.get('name')?.invalid && (travelerForm?.get('name')?.dirty || travelerForm?.get('name')?.touched)">
+          <div *ngIf="travelerForm?.get('name')?.errors?.required" class="text-danger">Name is required.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" formControlName="age" required>
+        <div *ngIf="travelerForm?.get('age')?.invalid && (travelerForm?.get('age')?.dirty || travelerForm?.get('age')?.touched)">
+          <div *ngIf="travelerForm?.get('age')?.errors?.required" class="text-danger">Age is required.</div>
+          <div *ngIf="travelerForm?.get('age')?.errors?.min" class="text-danger">Age must be at least 1.</div>
+          <div *ngIf="travelerForm?.get('age')?.errors?.max" class="text-danger">Age must be at most 120.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="text" class="form-control" id="mobileNumber" formControlName="mobileNumber" required>
+        <div *ngIf="travelerForm?.get('mobileNumber')?.invalid && (travelerForm?.get('mobileNumber')?.dirty || travelerForm?.get('mobileNumber')?.touched)">
+          <div *ngIf="travelerForm?.get('mobileNumber')?.errors?.required" class="text-danger">Mobile number is required.</div>
+          <div *ngIf="travelerForm?.get('mobileNumber')?.errors?.pattern" class="text-danger">Mobile number must be 10 digits.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender" formControlName="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div *ngIf="travelerForm?.get('gender')?.invalid && (travelerForm?.get('gender')?.dirty || travelerForm?.get('gender')?.touched)">
+          <div *ngIf="travelerForm?.get('gender')?.errors?.required" class="text-danger">Gender is required.</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">{{ editIndex === -1 ? 'Add Traveler' : 'Update Traveler' }}</button>
+    </form>
+  </div>
+  
+  <div class = "container">
+    <div class="travelers-table">
+      <table class="table table-striped" *ngIf="travelers.length > 0">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Mobile Number</th>
+            <th>Gender</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr *ngFor="let traveler of travelers; let i = index">
+            <td>{{ traveler.name }}</td>
+            <td>{{ traveler.age }}</td>
+            <td>{{ traveler.mobileNumber }}</td>
+            <td>{{ traveler.gender }}</td>
+            <td>
+              <button class="btn btn-primary btn-sm mr-2" (click)="editTraveler(i)">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="btn btn-danger btn-sm" (click)="deleteTraveler(i)">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  </div>
+</div>
+<div class="container" *ngIf="travelers.length === selectedTravelers" >
+    <!-- <button class="btn btn-primary" (click)="continueWithBooking()">
+      Continue with Booking
+    </button> -->
+  </div>
+

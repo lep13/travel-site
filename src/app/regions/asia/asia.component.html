@@ -30,6 +30,9 @@
     <button class="clear-filters-btn" (click)="clearFilters()">Clear Filters</button>
   </div>
 </div>
+<div *ngIf="selectedRegion !== '' && selectedDate !== ''">
+  <p>Search Results from your trip to {{selectedRegion}}, on {{selectedDate}} for {{selectedTravelers}} traveller(s)</p>
+</div>
 
 <div class="tour-packages">
 
@@ -41,7 +44,7 @@
         <h3>{{ tour.packageName }}</h3> 
         <div> 
         <p>Country: {{ tour.countryName }}</p>
-        <p>Cost per Person: {{ tour.costPerPerson }}</p>
+        <p>Cost per Person: ${{ tour.costPerPerson }}</p>
         <p>Adventure Type: {{ tour.adventureType }}</p>
         <p>{{ tour.description }}</p>
         </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { Router } from '@angular/router';
 import { Region } from '../model/region';
+import { TraveldataService } from '../services/traveldata.service';
 
 @Component({
   selector: 'app-search',
@@ -18,19 +19,27 @@ export class SearchComponent implements OnInit {
     { id: 'europe', name: 'Europe' }
   ];
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router, private travelDetails: TraveldataService) {
     this.searchForm = this.fb.group({
       region: ['', Validators.required],
       date: ['', Validators.required],
       travelers: ['', [Validators.required, Validators.min(1)]]
-    });
+      });
   }
 
   ngOnInit(): void {
     this.currentDate = this.getCurrentDate();
     this.searchForm.get('date')?.setValue(this.currentDate);
   }
-
+//yash
+  onMouseEnter(): void {
+    if (this.searchForm.valid) {
+      this.searchForm.controls['region'].markAsDirty();
+      this.searchForm.controls['date'].markAsDirty();
+      this.searchForm.controls['travelers'].markAsDirty();
+    }
+  }
+// yash
   getCurrentDate(): string {
     const today = new Date();
     return today.toISOString().split('T')[0];
@@ -50,12 +59,20 @@ export class SearchComponent implements OnInit {
   
   search(): void {
     if (this.searchForm.valid) {
+      const selectedRegion = this.searchForm.get('region')?.value;
+      const selectedTravelers = this.searchForm.get('travelers')?.value;
+      const selectedDate = this.searchForm.get('date')?.value;
+      this.travelDetails.updateSelectedSearchDetails({
+        region: selectedRegion,
+        travelers: selectedTravelers,
+        date: selectedDate
+      })
+
       this.navigateBasedOnRegion(this.searchForm.get('region')?.value);
     } else {
       this.showValidationErrors();
     }
   }
-
   navigateBasedOnRegion(region: string): void {
     // Your navigation logic based on the selected region
     this.router.navigate([`/destination/${region}`]);

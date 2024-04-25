@@ -53,6 +53,7 @@ main {
     a {
         position: absolute;
         opacity: 0;
+        padding-top: 10px;
         max-width: 80%;
         transition: opacity .3s ease-out;
         font-family: 'Montserrat', sans-serif; 

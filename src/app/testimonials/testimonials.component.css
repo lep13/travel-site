@@ -19,6 +19,9 @@ a{
     padding-left: 1px;
     padding-right:1px;
 }
+.star-ratings-css{
+    color:antiquewhite;
+}
 
 .rating-color{
     color: #fbc634

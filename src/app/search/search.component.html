@@ -1,25 +1,22 @@
-<div class="search-container"> 
-  
+<div class="search-container">
   <form [formGroup]="searchForm" (ngSubmit)="search()">
-   
-    
-      <!-- <div class="explore">
-        Explore Now
-      </div> -->
-      <div class="search-box">
-        
-        <div class="search-section">
-         
-          <select class="input-field" id="region" formControlName="region">
-            <option disabled selected value="">Select Region</option>
-            <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>
-          </select>
-          <span class="vertical-line"></span>
-          <input type="date" class="input-field" id="check-in" formControlName="date" [min]="currentDate" placeholder="Check-in Date" value="">
-          <span class="vertical-line"></span>
-          <input type="number" class="input-field short" id="travelers" formControlName="travelers" placeholder="Travelers" value="">
-        </div>
-        <button class="find-tours-btn" type="submit">FIND&nbsp;TOURS</button>
+    <div class="search-box">
+      <div class="search-section">
+        <select class="input-field" id="region" formControlName="region">
+          <option disabled selected value="">Select Region</option>
+          <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>
+        </select>
+        <span class="vertical-line"></span>
+        <input type="date" class="input-field" id="check-in" formControlName="date" [min]="currentDate"
+          placeholder="Check-in Date">
+        <span class="vertical-line"></span>
+        <input type="number" class="input-field short" id="travelers" formControlName="travelers" [max]=15 [min]=1
+          placeholder="Travelers">
       </div>
+      <button class="find-tours-btn" type="submit" [disabled]="!searchForm.valid" [ngClass]="{'enabled': searchForm.valid}"
+        (mouseenter)="onMouseEnter()">
+        FIND&nbsp;TOURS
+      </button>
+    </div>
   </form>
 </div>

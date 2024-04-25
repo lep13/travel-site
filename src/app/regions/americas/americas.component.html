@@ -36,6 +36,9 @@
       </div>
     </div>
   </div>
+  <div *ngIf="selectedRegion !== '' && selectedDate !== ''">
+    <p>Search Results from your trip to {{selectedRegion}}, on {{selectedDate}} for {{selectedTravelers}} traveller(s)</p>
+  </div>
 
   <div class="tour-packages">
     <div *ngFor="let tour of tourPackages" class="tour-package">
@@ -44,7 +47,7 @@
         <div class="package-details">
           <h3>{{ tour.packageName }}</h3>
           <p>Country: {{ tour.countryName }}</p>
-          <p>Cost per Person: {{ tour.costPerPerson }}</p>
+          <p>Cost per Person: $ {{ tour.costPerPerson }}</p>
           <p>Adventure Type: {{ tour.adventureType }}</p>
           <p>{{ tour.description }}</p>
         </div>

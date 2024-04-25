@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="bookings-container">
+  <div *ngIf="bookings$ | async as bookings; else loading">
+    <div *ngIf="bookings.length > 0;">
+      <h2>My Bookings</h2>
+      <ul>
+        <li *ngFor="let booking of bookings">
+          <h3>{{ booking.data.packageName }}</h3>
+          <p>Description: {{ booking.data.description }}</p>
+          <p>Country: {{ booking.data.countryName }}</p>
+          <p>Date: {{ booking.data.selectedDate ? (booking.data.selectedDate | date) : (getCurrentDate() | date) }}</p>
+          <p>Travelers: {{ booking.data.selectedTravelers }}</p>
+          <p>Total Cost: {{ booking.data.totalCost }}</p>
+          <button (click)="cancelBooking(booking.id)">Cancel Booking</button>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="!isLoggedIn" class="image !important">
+      <h2>Please Login to check your bookings</h2>
+      <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Please_log_in_image.png" routerLink="/login" alt="">    
+    </div>
+    <div  *ngIf="isLoggedIn">
+      <ng-template #noBookings>
+        <p>No bookings found.</p>
+      </ng-template>
+    </div>
+    
+  </div>
+</div>
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
+
+<app-footer></app-footer>

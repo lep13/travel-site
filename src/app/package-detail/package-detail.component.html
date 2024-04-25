@@ -1,4 +1,7 @@
 <app-navbar></app-navbar>
+
+<!-- <h4>Itinerary</h4>
+<app-timeline></app-timeline> -->
  
 <div *ngIf="package" class="package-details">
   <div class="details-container">
@@ -9,18 +12,108 @@
  
     <!-- Package Information -->
     <div class="info-container">
-      <h2>{{ package.packageName }}</h2>
-      <p>{{ package.description }}</p>
-      <p>Country: {{ package.countryName }}</p>
-      <p>Cost per Person: {{ package.costPerPerson }}</p>
-      <button class="confirm-button" (click)="openConfirmBookingModal()">Confirm Booking</button>
+     
+      <h2>{{ package.packageName }}</h2><br>
+      <p>{{ package.description }}</p><br>
+      <p> <b>Country:</b>  {{ package.countryName }}</p><br>
+      <b>Number of Travelers: </b>
+      <input type="number" class="input-field short" id="travelers" formControlName="travelers" placeholder="Travelers" [min]=1
+        [value]="selectedTravelers || 1" (input)="updateSelectedTravelers($event) ">
+      
+ <br><br>
+      <p><b>Cost per Person: </b> ${{ package.costPerPerson }}</p>
+    <br> 
+      <b>Date of Travel: </b>
+      <input type="date" class="input-field datee" id="check-in" formControlName="date" [min]="currentDate"
+        placeholder="Check-in Date" [value]="selectedDate || getCurrentDate()" (change)="updateSelectedDate($event)">
+ 
+ 
+      <!-- <p *ngIf="selectedDate != ''">  <b>Date of Travel:</b> {{ selectedDate | date:'dd-MM-yyyy' }}</p> -->
+      <br><br>
+ 
+      <p *ngIf="totalCost != 0"> <b>Total Cost:</b> $ {{totalCost}} </p><br>
+      <!-- <div class="button-container" style="display: flex; justify-content: center;">
+        <button class="confirm-button" routerLink="/trav-info" (click)="onTravelersAdded()">Add Travelers</button>
+       
+      </div> -->
+
+      <h6></h6>
+     
       <app-confirm-booking-modal (confirmation)="handleConfirmation($event)"[packageName]="package?.packageName || ''"></app-confirm-booking-modal>
+
  
     </div>
   </div>
+ 
 </div>
-<h1> Itinerary </h1>
+ 
+  <mat-horizontal-stepper class="mat-stepper" [linear]="isLinear" #stepper>
+    <mat-step label="Itinerary" state="book">
+      <h2><b></b></h2>
+      <app-timeline></app-timeline>
+      <!-- <p>Put down your phones.</p> -->
+      <div>
+     
+        <button  class="btn btn-primary" mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Add Traveller Details" state="add">
+      <h1><b></b></h1>
+      <p style="text-align: center;">Add {{selectedTravelers}} traveler(s) details </p>
+      <app-travelers-info></app-travelers-info>
+      <!-- <p>Socialize with each other.</p> -->
+      <div>
+        <button  class="btn btn-primary" mat-button matStepperPrevious>Back</button>
+        <button  class="btn btn-primary"  mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Confirm Booking" state="list">
+      <p></p>
+      <p><b>Privacy Policy</b></p>
+      <p>At 7 Rings, we respect your privacy and are committed to protecting the personal information you share with us. 
+        When you use our services, we collect information that you choose to share with us, including your name, contact details, and payment information. 
+        This information is used solely for processing your bookings and improving your experience with our services. 
+        We implement robust security measures to protect your data against unauthorized access, alteration, disclosure, or destruction.</p>
+      <!-- <p>You're welcome.</p> -->
+      <h1><b>Confirm Booking</b></h1>
+
+      <p><b>Package Name:</b> {{package?.packageName}}</p>
+      <p><b>Country:</b> {{package?.countryName}}</p>
+      <p><b>Number of Travelers:</b> {{selectedTravelers}}</p>
+      <p><b>Date of Travel:</b> {{selectedDate}}</p>
+ 
+      <p><b>Cost Per Person: </b>{{package?.costPerPerson}}</p>
+      <p><b>Total Cost:</b>{{totalCost}}</p>
+
+      <p>Please ensure that all information is correct to go ahead with the booking. Should you need to make any changes, contact us immediately.
+
+        Prepare for an unforgettable journey with 7 Rings, where adventure and luxury meet to create a unique experience just for you.
+        <br>
+        <br>Safe travels,
+        <br>The 7 Rings Team</p>
+
+
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <small style="color: red;" *ngIf="buttonClicked">Please Login before booking!</small>
+        <button class="confirm-button" *ngIf="!isLoggedIn" (click)="onClick()">Confirm Booking</button>
+      </div>
+
+      <button class="confirm-button" *ngIf="isLoggedIn" (click)="openConfirmBookingModal()" [disabled]="!onTravelersAdded" [title]="cnfrm">Confirm Booking</button>
+      
+    </mat-step>
+ 
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="phone">
+      <mat-icon>call_end</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+      <mat-icon>forum</mat-icon>
+    </ng-template>
+  </mat-horizontal-stepper>
+ 
+ 
+<!-- <h1> Itinerary </h1> -->
 <app-confirm-booking-modal (confirmation)="handleConfirmation($event)"></app-confirm-booking-modal>
  
-<app-timeline></app-timeline>
+<!-- <app-timeline></app-timeline> -->
 <app-footer></app-footer>

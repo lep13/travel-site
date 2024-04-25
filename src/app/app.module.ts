@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import emailjs from '@emailjs/browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,10 +35,31 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollEffectComponent } from './scroll-effect/scroll-effect.component';
 // import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
 import {MatSliderModule} from '@angular/material/slider';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { TypeWriterComponent } from './type-writer/type-writer.component';
 import { LocationsTextComponent } from './locations-text/locations-text.component';
+import { TravelersInfoComponent } from './travelers-info/travelers-info.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+
+import {AngularFireModule} from '@angular/fire/compat';
+
+
+
+import { firebaseConfig } from '../firebase-config';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+
+import { MybookingsComponent } from './mybookings/mybookings.component';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WeatherComponent } from './weather/weather.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ExploreWeatherComponent } from './explore-weather/explore-weather.component';
+import { CdialogComponent } from './cdialog/cdialog.component';
 
 
 
@@ -71,6 +92,14 @@ import { LocationsTextComponent } from './locations-text/locations-text.componen
     TestimonialsComponent,
     TypeWriterComponent,
     LocationsTextComponent,
+    TravelersInfoComponent,
+    LoginComponent,
+    ProfileComponent,
+    MybookingsComponent,
+    WeatherComponent,
+    ExploreWeatherComponent,
+    CdialogComponent,
+
     // ParallaxEffectComponent,
   ],
   imports: [
@@ -83,11 +112,27 @@ import { LocationsTextComponent } from './locations-text/locations-text.componen
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
-    MatSliderModule
+    MatSliderModule,
+    
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    MatStepperModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    
+    
+   
+    AngularFireModule.initializeApp(firebaseConfig.firebase,'tourism'),
+    
+   
   ],
-  providers: [
-  ],
-  bootstrap: [AppComponent]
+
+  providers: [],
+
+  bootstrap: [AppComponent],
+
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { 
   

@@ -1,3 +1,7 @@
+h1,h2,h3,h4,h5,h6,p{
+  font-family: 'Cabin', sans-serif;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -10,8 +14,8 @@
   background-color: rgba(50, 50, 50, 0.8); /* Neutral background color */
   padding-top: 80px;
 }
-
-
+ 
+ 
 .modal-content {
   background-color: #2c2c2c; /* Dark neutral background */
   margin: 5% auto; /* Centered with a top margin */
@@ -26,10 +30,10 @@
   flex-direction: column; /* Stack children vertically */
   align-items: center; /* Center-align the content horizontally */
 }
-
-
+ 
+ 
 /* ... */
-
+ 
 .btn-primary {
   background-color: #4a4a4a; /* Dark button background */
   color: white;
@@ -42,11 +46,11 @@
   text-align: center;
   transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
-
+ 
 .btn-primary:hover {
   background-color: #626262; /* Slightly lighter on hover */
 }
-
+ 
 .close {
   color: #aaaaaa; /* Lighter close button for better visibility */
   cursor: pointer;
@@ -57,23 +61,23 @@
   top: 20px;
   right: 20px;
 }
-
+ 
 /* ... */
-
+ 
 .modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+ 
 .modal-content form {
   width: 100%;
 }
-
+ 
 .modal-content form .form-group {
   margin-bottom: 1rem;
 }
-
+ 
 /* Adding animation to the modal for a smooth entrance */
 .modal.show {
   display: flex;
@@ -81,12 +85,12 @@
   justify-content: center;
   animation: fadeIn 0.3s;
 }
-
+ 
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-
+ 
 .modal-content input[type="text"],
 .modal-content input[type="email"],
 .modal-content input[type="tel"] {

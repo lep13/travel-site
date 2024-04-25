@@ -15,31 +15,41 @@ import { PackageDetailComponent } from './package-detail/package-detail.componen
 import { AdventuresComponent } from './adventures/adventures.component';
 import { TimelineComponent } from './package-detail/timeline/timeline.component';
 import { ConfirmBookingModalComponent } from './confirm-booking-modal/confirm-booking-modal.component';
+import { TravelersInfoComponent } from './travelers-info/travelers-info.component';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileResolver } from './guards/profile.resolver';
+import { MybookingsComponent } from './mybookings/mybookings.component';
+import { WeatherComponent } from './weather/weather.component';
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'weather', component: WeatherComponent},
+  {path:'home',component:HomeComponent},
   {path: 'destinations', component: DestinationComponent},
   { path: 'destinations/:regionId', component: DestinationComponent },
-  { path: 'adventures', component: AdventuresComponent},
+  { path: 'exclusive', component: AdventuresComponent},
   { path: 'destination/asia', component: AsiaComponent },
   { path: 'destination/americas', component: AmericasComponent },
   { path: 'destination/europe', component: EuropeComponent },
   { path: 'destination/middle-east', component: MiddleEastComponent },
   { path: 'packages/:id', component: PackageDetailComponent },
    {path: "confirmation", component: ConfirmBookingModalComponent},
-  // {path: 'destinations/:regionId/packages', component: PackagesComponent},
-  // {
-  //   path: 'destination',
-  //   component: RegionsComponent, // Parent component for destinations
-  //   children: [
-  //     { path: 'asia', component: AsiaComponent }, // Child route for Asia
-  //     { path: 'europe', component: EuropeComponent }, // Child route for Europe
-  //     { path: 'middle-east', component: MiddleEastComponent }, // Child route for Mid-East
-  //     { path: 'americas', component: AmericasComponent } // Child route for America
-  //   ]
-  // },
+  {path: "trav-info", component : TravelersInfoComponent},
   {path: 'packages/:id/iternary', component: TimelineComponent},
   {path: 'about-us', component: AboutUsComponent },
   {path: 'contact', component: ContactComponent},
+  {path:'login',component:LoginComponent},
+   {path:'profile',component:ProfileComponent},
+   { 
+    path: 'profile', 
+    component: ProfileComponent,
+    resolve: { user:ProfileResolver } // Resolve user object before activating route
+  },
+  {
+    path:'mybookings',
+    component:MybookingsComponent
+  },
 
   {path: '**', component: NotFoundComponent}
 ];

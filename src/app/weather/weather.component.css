@@ -1,0 +1,92 @@
+.header{
+    font-weight: bolder;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 320px 40px;
+    margin: 0;
+    color: #e8e6e3;
+}
+
+.header h1, .header h4{
+  margin: 3px;
+  text-shadow: #000;
+}
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select, input, button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: rgb(171, 167, 167);
+    border-radius: 50px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button:hover {
+    background-color: rgb(117, 117, 117);
+    color: white;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  input:disabled {
+    background-color: #f0f0f0;
+  }
+
+  .bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/cI4te85.png');
+    /* background-image: url('https://rare-gallery.com/uploads/posts/351193-4k-wallpaper.jpg'); */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.80; 
+    z-index: -1; 
+}
+
+.weather-form {
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    z-index: 20;
+    margin-bottom: 50px;
+}
+
+.weatherdeets {
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    margin-bottom: 50px;
+}
+
+
+  

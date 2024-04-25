@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<div class="bg-image"></div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<div class="header">
+    <h1>Check Weather</h1>
+    <h4>Plan Your Trips Better</h4>
+</div>
+
+<div class="weather-container">
+<div class="weather-form">
+    <div class="cform">
+      <form (ngSubmit)="fetchWeather()">
+        <div class="form-group">
+          <label for="region">Select Region:</label>
+          <select id="region" [(ngModel)]="selectedRegion" name="region" (change)="onRegionChange()" required>
+            <option value="" disabled selected>Select a region</option>
+            <option *ngFor="let region of regions" [value]="region">{{region}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="country">Enter Country:</label>
+          <input list="countryList" id="countryInput" [(ngModel)]="selectedCountry" name="country" [disabled]="!isCountryInputEnabled" placeholder="Type or select a country" class="form-control"/>
+          <datalist id="countryList">
+            <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+          </datalist>          
+          <div *ngIf="invalidCountry" class="invalid-feedback">Invalid: Country not present in the selected region.</div>
+        </div>        
+        <button type="submit" [disabled]="!isCountryInputEnabled" (click)="fetchWeather()">Check Weather</button>
+      </form>
+    </div>
+</div>
+  
+      
+      <div class="weatherdeets" *ngIf = "weatherDetails">
+          <h3>Weather in {{ selectedCountry }}, {{ selectedRegion }} right now:</h3>
+          <p>Temperature: {{ weatherDetails.main.temp| number:'1.0-2' }} K</p>
+          <p>Weather: {{ weatherDetails.weather[0].description }}</p>
+          <p>Humidity: {{ weatherDetails.main.humidity }}%</p>
+          <p>Wind Speed: {{ weatherDetails.wind.speed }} m/s</p>
+        </div>
+      </div>
+  
+<app-footer></app-footer>   

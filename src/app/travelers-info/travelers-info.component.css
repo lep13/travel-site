@@ -1,0 +1,48 @@
+.travelers-form {
+  width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #d7ccc8    ;
+}
+
+.travelers-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.travelers-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.travelers-form label {
+  font-weight: 500;
+}
+
+.travelers-form .form-control {
+  border-radius: 4px;
+}
+
+.travelers-form button.btn {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.travelers-table {
+  margin-top: 2rem;
+}
+
+.travelers-table th,
+.travelers-table td {
+  text-align: center;
+}
+
+.travelers-table .btn {
+  margin-right: 0.5rem;
+}
+.big{
+  display: flex;
+}
