@@ -1,4 +1,4 @@
-# TripProject
+# Travel-Site
 
 ### The travel site project is an interactive web application built with Angular and styled using HTML, CSS, SCSS, and TypeScript. It's structured for Angular CLI facilitating tasks like server running for development, component scaffolding, and building processes. It has testing capabilities for both unit and end-to-end tests. The repository contains various assets and code required to run a travel-related web service.
 
